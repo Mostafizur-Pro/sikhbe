@@ -2,11 +2,13 @@ import bagImage from "../../assets/newsletterBag.jpg";
 import Image from "next/image";
 
 // Import Open Sans font
-import { Bodoni_Moda } from "next/font/google";
+import { Metal_Mania } from "next/font/google";
+
 // Configure font object
-const bodoniModa = Bodoni_Moda({
+const bodoniModa = Metal_Mania({
     subsets: ["latin"],
     display: "swap",
+    weight: "400"
 });
 
 const Newsletter = () => {
