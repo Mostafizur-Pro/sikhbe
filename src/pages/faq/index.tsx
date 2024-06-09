@@ -1,16 +1,19 @@
-import FAQBanner from '@/components/Faq/FAQBanner';
-import FAQPage from '@/components/Faq/FAQPage';
-import Faq from '@/components/Faq/Faq';
-import React from 'react';
+import Cover from "@/components/Cover/Cover";
+import Faq from "@/components/Faq/Faq";
+
+import React from "react";
 
 const index = () => {
-    return (
-        <div>
-          <FAQBanner/>
-          <FAQPage/>
-          {/* <Faq/>   */}
-        </div>
-    );
+  return (
+    <div className="container mx-auto bg-main text-white">
+      <Cover title={"Frequently Asked Questions"} title2={"FAQ"} />
+      <Faq />
+      {/* <CourseDetails />
+        <CourseCurriculum />
+        <CourseSpecialty />
+        <CourseAdditional /> */}
+    </div>
+  );
 };
 
 export default index;
