@@ -14,7 +14,7 @@ const Cover = ({ title, title2 }: any) => {
   return (
     <div>
       <section
-        className=" relative pb-24 pt-24 lg:pt-36 mb-80 bg-cover bg-bottom "
+        className=" relative pb-24 pt-24 lg:pt-36 mb-40 bg-cover bg-bottom "
         style={{
           backgroundImage:
             'url("https://bonx-react.pages.dev//static/breadcrumbs-bg-aead09dfeb2feab4bfcb4b524bd0b9a5.webp")',
