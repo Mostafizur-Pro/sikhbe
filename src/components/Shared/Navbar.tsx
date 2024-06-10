@@ -29,7 +29,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="mx-auto ">
+    <div className="mx-auto bg-main ">
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>
@@ -106,21 +106,21 @@ export default function Navbar() {
       </Transition.Root>
 
       {/* Computer Menu */}
-      <header className="relative bg-white ">
-        <div className="flex justify-between  h-10 items-center  bg-rose-300 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+      <header className="relative bg-main text-white ">
+        {/* <div className="flex justify-between  h-10 items-center   px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
           <div>Discount 20%</div>
           <div>0182934357</div>
-        </div>
+        </div> */}
 
         <nav
           aria-label="Top"
-          className="container mx-auto lg:px-6 px-3 bg-white uppercase"
+          className="container mx-auto lg:px-6 px-3  uppercase"
         >
           <div className="">
             <div className="flex h-16 items-center">
               <button
                 type="button"
-                className="relative rounded-md bg-white py-2 md:px-2 px-0 text-gray-400 lg:hidden"
+                className="relative rounded-md  py-2 md:px-2 px-0 lg:hidden"
                 onClick={() => setOpen(true)}
               >
                 <span className="absolute -inset-0.5" />
@@ -143,7 +143,7 @@ export default function Navbar() {
                     <a
                       key={page.name}
                       href={page.href}
-                      className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                      className="flex items-center text-lg font-medium text-[#b154f0] hover:text-white"
                     >
                       {page.name}
                     </a>
@@ -153,10 +153,9 @@ export default function Navbar() {
 
               <div className="ml-auto flex items-center gap-1">
                 {/* Search */}
-                <div className="flex lg:mr-4">
-                  {/* Search */}
-                  <LuSearch className="h-7 w-7 text-gray-400 hover:text-gray-500" />
-                </div>
+                {/* <div className="flex lg:mr-4">
+                  <LuSearch className="h-7 w-7 " />
+                </div> */}
                 <div className="lg:me-3">
                   {session ? (
                     <div className="flex gap-4">
@@ -165,7 +164,7 @@ export default function Navbar() {
                         className="tooltip tooltip-top hover:tooltip-open lowercase"
                         href={"/dashboard/account"}
                       >
-                        <IoPersonSharp className="h-6 w-6 text-gray-400 hover:text-gray-500" />
+                        <IoPersonSharp className="h-6 w-6 text-white hover:text-gray-500" />
                       </Link>
                       <button
                         onClick={(e) => {
@@ -173,33 +172,14 @@ export default function Navbar() {
                           signOut();
                         }}
                       >
-                        <LuLogOut className="h-6 w-6 text-gray-400 hover:text-gray-500 cursor-pointer" />
+                        <LuLogOut className="h-8 w-8 text-white hover:text-gray-500 cursor-pointer" />
                       </button>
                     </div>
                   ) : (
                     <Link href={"/login"}>
-                      <IoPersonSharp className="h-6 w-6 text-gray-400 hover:text-gray-500" />
+                      <IoPersonSharp className="h-8 w-8 text-white hover:text-gray-500" />
                     </Link>
                   )}
-                </div>
-
-                {/* Cart */}
-                <div className="ml-4 flow-root me-2">
-                  <a
-                    href="#"
-                    className="group -m-2 flex items-center relative "
-                  >
-                    <BsBagFill
-                      className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
-                      aria-hidden="true"
-                    />
-                    <div className="absolute -bottom-1 right-3.5 border flex justify-center items-center px-1.5 rounded-full bg-white">
-                      <span className="text-xs font-medium  text-gray-700 group-hover:text-gray-800">
-                        0
-                      </span>
-                      <span className="sr-only">items in cart, view bag</span>
-                    </div>
-                  </a>
                 </div>
               </div>
             </div>

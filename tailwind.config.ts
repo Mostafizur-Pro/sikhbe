@@ -14,7 +14,8 @@ module.exports = {
       },
       backgroundColor: {
         "rgba-9-0-42": "rgb(9 0 42 / var(--tw-bg-opacity))", // Define a custom background color
-        "main": "rgba(9, 0, 42, 1)", // Add the custom background color
+        main: "rgba(9, 0, 42, 1)",
+        lightGray10: "#201c6d", // Add the custom background color
       },
     },
   },

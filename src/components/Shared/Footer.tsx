@@ -1,6 +1,12 @@
 const Footer: React.FC = () => {
   return (
-    <footer className="py-16 bg-base-200 text-base-content">
+    <footer
+      className="py-16 bg-main text-white"
+      style={{
+        backgroundImage:
+          'url("https://bonx-react.pages.dev//static/breadcrumbs-bg-aead09dfeb2feab4bfcb4b524bd0b9a5.webp")',
+      }}
+    >
       <div className="container mx-auto footer">
         <aside>
           <div>
@@ -14,16 +20,22 @@ const Footer: React.FC = () => {
           </h4>
           <div className="space-y-1 text-sm">
             <p className="">
-              <a className="link link-hover">Level-4, 34, Awal Centre, Banani, Dhaka</a>
+              <a className="link link-hover">
+                Level-4, 34, Awal Centre, Banani, Dhaka
+              </a>
             </p>
             <p className="">
               <a className="link link-hover">Support: web@sikhbe.com</a>
             </p>
             <p className="">
-              <a className="link link-hover">Helpline: 01950165017 , 01731113169</a>
+              <a className="link link-hover">
+                Helpline: 01950165017 , 01731113169
+              </a>
             </p>
             <p className="">
-              <a className="link link-hover">(Available : Sat - Thu, 10:00 AM to 7:00 PM)</a>
+              <a className="link link-hover">
+                (Available : Sat - Thu, 10:00 AM to 7:00 PM)
+              </a>
             </p>
           </div>
         </nav>
@@ -41,10 +53,9 @@ const Footer: React.FC = () => {
             <p className="">
               <a className="link link-hover">About us</a>
             </p>
-           
           </div>
         </nav>
-       
+
         <nav className="hidden md:block ">
           <h4 className="text-xl uppercase font-bold text-gray-400 pb-3">
             Legal

@@ -1,20 +1,19 @@
 const HeroFAQ = () => {
   return (
-    <section className="container mx-auto lg:px-6 px-3 bg-gray-900 rounded-3xl py-16">
+    <section className="container mx-auto lg:px-6 px-3 bg-lightGray10 rounded-3xl py-16">
       <div className="flex items-center">
-        <div className="w-[40%] text-5xl font-bold text-[#b154f0]">
+        <div className="w-[40%] text-5xl font-bold text-white">
           Frequently Asked Questions
         </div>
         <div className="join join-vertical w-[60%]">
           {/* FAQ Item 1 */}
-          <div className="collapse collapse-arrow join-item border border-[#b154f0] mb-5">
+          <div className="collapse collapse-arrow join-item border border-[#09002a] mb-5">
             <input type="radio" name="my-accordion-4" defaultChecked />
             <div className="collapse-title text-3xl font-medium text-[#b154f0]">
               এই কোর্সটি কাদের জন্য উপযুক্ত?
             </div>
-            <div className="collapse-content text-2xl text-white">
-              <p>
-                {/* <hr className="my-5" /> */}
+            <div className="collapse-content text-2xl text-white ">
+              <p className="capitalize">
                 যারা একদম শূন্য থেকে শুরু করে ওয়েব ডেভেলপমেন্ট শিখে ওয়েব
                 ডেভেলপার হিসেবে ক্যারিয়ার গড়তে চান, তাদের জন্য এই কোর্সটি
                 উপযুক্ত। সিএসই বা নন-সিএসই যেকোনো ব্যাকগ্রাউন্ডের শিক্ষার্থীই এই
@@ -24,7 +23,7 @@ const HeroFAQ = () => {
             </div>
           </div>
           {/* FAQ Item 2 */}
-          <div className="collapse collapse-arrow join-item border border-[#b154f0] mb-5">
+          <div className="collapse collapse-arrow join-item border border-[#09002a] mb-5">
             <input type="radio" name="my-accordion-4" />
             <div className="collapse-title text-3xl font-medium text-[#b154f0]">
               কোর্স করার জন্য কি পূর্বে কোনো অভিজ্ঞতা দরকার?
@@ -44,7 +43,7 @@ const HeroFAQ = () => {
             </div>
           </div>
           {/* FAQ Item 3 */}
-          <div className="collapse collapse-arrow join-item border border-[#b154f0] mb-5">
+          <div className="collapse collapse-arrow join-item border border-[#09002a] mb-5">
             <input type="radio" name="my-accordion-4" />
             <div className="collapse-title text-3xl font-medium text-[#b154f0]">
               কোর্সে কি কি অন্তর্ভুক্ত আছে?
@@ -62,7 +61,7 @@ const HeroFAQ = () => {
             </div>
           </div>
           {/* FAQ Item 4 */}
-          <div className="collapse collapse-arrow join-item border border-[#b154f0] mb-5">
+          <div className="collapse collapse-arrow join-item border border-[#09002a] mb-5">
             <input type="radio" name="my-accordion-4" />
             <div className="collapse-title text-3xl font-medium text-[#b154f0]">
               এই কোর্সে কি WordPress বা Freelancing সম্পর্কিত কিছু আছে?
