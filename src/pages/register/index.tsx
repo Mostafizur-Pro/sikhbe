@@ -1,9 +1,12 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
-import { FaSignInAlt, FaUserAlt } from "react-icons/fa";
+import { CiMobile3 } from "react-icons/ci";
+import { FaPhoneAlt, FaSignInAlt, FaUserAlt } from "react-icons/fa";
 import { IoEye, IoEyeOff } from "react-icons/io5";
 
 const Register = () => {
+  const router = useRouter();
   const [createUserLoading, setCreateUserLoading] = useState(false);
   // show password
   const [showPassword, setShowPassword] = useState(false);
@@ -11,13 +14,14 @@ const Register = () => {
   // storing form data in state
   const [formData, setFormData] = useState({
     name: "",
+    phone: "",
     email: "",
     password: "",
     cPassword: "",
   });
 
   // destructuring form data
-  const { name, email, password, cPassword } = formData;
+  const { name, phone, email, password, cPassword } = formData;
 
   // storing errors in state
   const [Confirm_errors, setConfirm_Errors] = useState(false);
@@ -26,11 +30,7 @@ const Register = () => {
   // handling form data sending it to backend
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    if (
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{6,})/.test(
-        password
-      )
-    ) {
+    if (password && cPassword) {
       setAddOneCapitalWordError("");
       if (password !== cPassword) {
         setConfirm_Errors(true);
@@ -39,15 +39,15 @@ const Register = () => {
         setCreateUserLoading(true);
         const userData = {
           name,
+          phone,
           email,
           password: cPassword,
-          role: "buyer",
-          phone: " ",
-          image: " ",
-          address: " ",
         };
 
-        fetch("https://techgear-server.vercel.app/api/v1/users/create-user", {
+        const apiUrl = process.env.NEXT_PUBLIC_LOCAL_API_URL;
+        const url = `${apiUrl}/api/v1/student/create-student`;
+
+        fetch(url, {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -58,6 +58,10 @@ const Register = () => {
           .then((result) => {
             setCreateUserLoading(false);
             console.log("register", result);
+            if (!result.success) {
+              setConfirmShowPassword(result.message);
+            }
+            router.replace("/login");
           })
           .catch((err) => {
             console.log(err);
@@ -103,6 +107,34 @@ const Register = () => {
                   name="name"
                   className="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-orange-400"
                   placeholder="Name"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col mb-6">
+              <label
+                htmlFor="name"
+                className="mb-1 text-xs sm:text-sm tracking-wide text-white"
+              >
+                Phone:
+              </label>
+              <div className="relative">
+                <div className="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+                  <FaPhoneAlt />
+                </div>
+
+                <input
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      phone: e.target.value,
+                    })
+                  }
+                  required
+                  id="phone"
+                  type="text"
+                  name="phone"
+                  className="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-orange-400"
+                  placeholder="phone"
                 />
               </div>
             </div>
