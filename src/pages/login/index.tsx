@@ -39,12 +39,11 @@ const Login = () => {
     } catch (error) {
       console.error(error);
     }
-
   };
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-300">
-      <div className="flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md">
-        <div className="font-medium self-center text-xl sm:text-2xl uppercase text-gray-800">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-main">
+      <div className="flex flex-col bg-main border-2  shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md">
+        <div className="font-medium self-center text-xl sm:text-2xl uppercase text-white">
           Login To Your Account
         </div>
         <div className="mt-10">
@@ -52,7 +51,7 @@ const Login = () => {
             <div className="flex flex-col mb-6">
               <label
                 htmlFor="email"
-                className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600"
+                className="mb-1 text-xs sm:text-sm tracking-wide text-white"
               >
                 E-Mail Address:
               </label>
@@ -90,7 +89,7 @@ const Login = () => {
             <div className="flex flex-col mb-6">
               <label
                 htmlFor="password"
-                className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600"
+                className="mb-1 text-xs sm:text-sm tracking-wide text-white"
               >
                 Password:
               </label>
@@ -131,7 +130,7 @@ const Login = () => {
             <div className="flex w-full">
               <button
                 type="submit"
-                className="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-orange-600 hover:bg-orange-700 rounded py-2 w-full transition duration-150 ease-in"
+                className="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-purple-600 hover:bg-purple-700 rounded py-2 w-full transition duration-150 ease-in"
               >
                 {loginLoading ? (
                   <span className="text-white loading loading-spinner loading-md"></span>
@@ -160,7 +159,7 @@ const Login = () => {
         <div className="flex justify-center items-center mt-6">
           <Link
             href="/register"
-            className="inline-flex items-center font-bold text-orange-500 hover:text-orange-700 text-xs text-center"
+            className="inline-flex items-center font-bold text-purple-500 hover:text-purple-700 text-md text-center"
           >
             <span>
               <svg

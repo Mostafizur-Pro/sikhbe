@@ -8,9 +8,10 @@ const TechnologyLearn = () => {
           What You'll Learn This Course?
         </h1>
         <div className="my-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mx-auto max-w-7xl px-5">
-          <p className="btn bg-[#E44D26] font-bold text-lg border-none text-white rounded-md hover:bg-[#a93315] hover:scale-105 transition-transform duration-300 ease-in-out">
+          <p className="btn bg-gradient-to-r from-[#E44D26] to-[#a93315] font-bold text-lg border-none text-white rounded-md hover:from-[#a93315] hover:to-[#E44D26] hover:scale-105 transition-transform duration-300 ease-in-out">
             HTML
           </p>
+
           <p className="btn bg-[#2965f1] font-bold text-lg border-none text-white rounded-md hover:bg-[#264de4] hover:scale-105 transition-transform duration-300 ease-in-out">
             CSS
           </p>
