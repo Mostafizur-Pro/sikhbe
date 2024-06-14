@@ -4,6 +4,7 @@ import React from 'react';
 const Profile = () => {
 
   const session = useSession();
+  console.log('dat',session)
 
   const user = session.data?.user;
 

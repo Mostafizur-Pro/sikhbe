@@ -1,3 +1,4 @@
+import axios from "axios";
 import NextAuth from "next-auth";
 import CredentialProvider from "next-auth/providers/credentials";
 
@@ -19,32 +20,17 @@ const authOptions = {
     CredentialProvider({
       name: "Credentials",
       credentials: {},
-      async authorize(credentials: { email: string; password: string }) {
+      async authorize(credentials: Record<string, string> | undefined) {
+        if (!credentials) {
+          throw new Error("No credentials provided");
+        }
         const { email, password } = credentials;
 
         try {
-          const response = await fetch("https://techgear-server.vercel.app/api/v1/auth/login", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ email: email, password: password }),
-          });
+          const response = await axios.post("/api/students/login", credentials);
 
-          const data = await response.json();
-
-          if (data.success) {
-
-            const response = await fetch("https://techgear-server.vercel.app/api/v1/users/")
-            const allUsers = await response.json();
-            const user = (allUsers.data as UserData[]).find((u) => u.email === email);
-            return user;
-            // console.log({...user, accessToken : data.data.accessToken});
-            // return {...user, accessToken : data.data.accessToken};
-
-          } else {
-            throw new Error(data.message || "Authentication failed");
-          }
+          // const data = await response.json();
+          return response;
         } catch (error) {
           console.error("Authentication error:", error);
           throw new Error("Authentication failed");
@@ -52,8 +38,11 @@ const authOptions = {
       },
     }),
   ],
+  // session: {
+  //   jwt: true,
+  // },
   session: {
-    jwt: true,
+    strategy: "jwt",
   },
   secret: process.env.NEXTAUTH_SECRET,
   pages: {

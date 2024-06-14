@@ -1,15 +1,15 @@
 "use client";
 
+import axios from "axios";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const router = useRouter();
-  // loading when user login
   const [loginLoading, setLoginLoading] = useState(false);
-  // storing form data in state
   const [formData, setFormData] = useState({ email: "", password: "" });
 
   const [error, setError] = useState("");
@@ -22,17 +22,17 @@ const Login = () => {
     const password = formData.password;
 
     try {
-      const res = await signIn("credentials", {
-        email,
-        password,
-        redirect: false,
-      });
+      // const res = await signIn("credentials", {
+      //   email,
+      //   password,
+      //   redirect: false,
+      // });
 
-      if (res?.error) {
-        setError("Invalid credentials");
-        setLoginLoading(false);
-        return;
-      }
+      const response = await axios.post("/api/students/login", formData);
+      // console.log("data", response);
+      // console.log("Login success", response.data);
+      toast.success("Login success");
+      router.push("/dashboard");
 
       setLoginLoading(false);
       router.replace("/");
