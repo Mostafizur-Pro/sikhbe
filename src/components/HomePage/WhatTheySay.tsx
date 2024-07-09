@@ -3,7 +3,7 @@ import React from "react";
 const WhatTheySay = () => {
   return (
     <div className="container mx-auto">
-      <section className=" relative ">
+      <section className="relative">
         <div>
           <img
             src="https://html.themewin.com/edurcok-preview-tailwind/edurock/assets/images/about/about_6.png"
@@ -28,13 +28,13 @@ const WhatTheySay = () => {
               data-aos="fade-up"
             >
               <div className="relative">
-                <span className="text-xl font-semibold text-primaryColor bg-whitegrey3 px-6 py-5px mb-5 rounded-full inline-block">
+                <span className="text-xl font-semibold px-6 py-5px mb-5 rounded-full inline-block">
                   Course List
                 </span>
-                <h3 className="text-3xl md:text-size-35 2xl:text-size-38 3xl:text-size-42 leading-10 md:leading-45px 2xl:leading-50px 3xl:leading-2xl font-bold text-blackColor pb-25px dark:text-blackColor-dark">
+                <h3 className="text-3xl md:text-size-35 2xl:text-size-38 3xl:text-size-42 leading-10 md:leading-45px 2xl:leading-50px 3xl:leading-2xl font-bold  pb-25px ">
                   What They Say About us
                 </h3>
-                <p className="text-sm md:text-base text-contentColor mb-5 2xl:mb-45px dark:text-contentColor-dark">
+                <p className="text-sm md:text-base  mb-5 2xl:mb-45px ">
                   Construction is a general term meaning the art and science to
                   form systems organizations and comes from Latin Construction
                   is
@@ -42,7 +42,7 @@ const WhatTheySay = () => {
 
                 <div>
                   <a
-                    className="text-size-15 text-whiteColor bg-secondaryColor px-25px py-10px border border-secondaryColor hover:text-secondaryColor hover:bg-whiteColor inline-block rounded dark:hover:text-whiteColor dark:hover:bg-secondaryColor"
+                    className="text-size-15   px-25px py-10px border   inline-block rounded "
                     href="#"
                   >
                     Explore More <i className="icofont-long-arrow-right"></i>
@@ -51,17 +51,17 @@ const WhatTheySay = () => {
               </div>
             </div>
             <div data-aos="fade-up" className="aos-init aos-animate">
-              <div className="bg-whiteColor px-25px py-50px mb-22px relative dark:bg-whiteColor-dark">
-                <p className="text-base lg:text-sm 2xl:text-base text-contentColor dark:text-contentColor-dark">
+              <div className=" px-25px py-50px mb-22px relative ">
+                <p className="text-base lg:text-sm 2xl:text-base  ">
                   “The other hand we denounce righteou indg ation men who are so
                   beguiled and demoraliz by the the mo ment.Dislike men who so
                   development co”
                 </p>
 
-                <div className="text-xl lg:text-3xl text-whiteColor bg-primaryColor w-10 h-10 lg:w-15 lg:h-15 flex items-center justify-center absolute top-0 left-0 md:-translate-y-1/2 md:-translate-x-1/2 z-20">
+                <div className="text-xl lg:text-3xl   w-10 h-10 lg:w-15 lg:h-15 flex items-center justify-center absolute top-0 left-0 md:-translate-y-1/2 md:-translate-x-1/2 z-20">
                   <i className="icofont-quote-left"></i>
                 </div>
-                <span className="w-0 h-0 border-l-12 border-r-12 border-t-15 border-l-transparent border-r-transparent border-t-whiteColor absolute bottom-[-14px] left-[27px] dark:border-t-whiteColor-dark"></span>
+                <span className="w-0 h-0 border-l-12 border-r-12 border-t-15 border-l-transparent border-r-transparent  absolute bottom-[-14px] left-[27px] "></span>
               </div>
 
               <div className="flex items-center gap-5 2xl:gap-20">
@@ -73,27 +73,27 @@ const WhatTheySay = () => {
                   />
                 </div>
                 <div>
-                  <h4 className="text-xl lg:text-lg 2xl:text-xl font-semibold text-blackColor dark:text-blackColor-dark">
+                  <h4 className="text-xl lg:text-lg 2xl:text-xl font-semibold  ">
                     Robind Jon
                   </h4>
-                  <p className="text-base lg:text-size-15 2xl:text-base text-lightGrey9 dark:text-lightGrey9-dark">
+                  <p className="text-base lg:text-size-15 2xl:text-base ">
                     Desginer TechBoot
                   </p>
                 </div>
               </div>
             </div>
             <div data-aos="fade-up" className="aos-init aos-animate">
-              <div className="bg-whiteColor px-25px py-50px mb-22px relative dark:bg-whiteColor-dark">
-                <p className="text-base lg:text-sm 2xl:text-base text-contentColor dark:text-contentColor-dark">
+              <div className=" px-25px py-50px mb-22px relative ">
+                <p className="text-base lg:text-sm 2xl:text-base  ">
                   “The other hand we denounce righteou indg ation men who are so
                   beguiled and demoraliz by the the mo ment.Dislike men who so
                   development co”
                 </p>
 
-                <div className="text-xl lg:text-3xl text-whiteColor bg-primaryColor w-10 h-10 lg:w-15 lg:h-15 flex items-center justify-center absolute top-0 left-0 md:-translate-y-1/2 md:-translate-x-1/2 z-20">
+                <div className="text-xl lg:text-3xl   w-10 h-10 lg:w-15 lg:h-15 flex items-center justify-center absolute top-0 left-0 md:-translate-y-1/2 md:-translate-x-1/2 z-20">
                   <i className="icofont-quote-left"></i>
                 </div>
-                <span className="w-0 h-0 border-l-12 border-r-12 border-t-15 border-l-transparent border-r-transparent border-t-whiteColor absolute bottom-[-14px] left-[27px] dark:border-t-whiteColor-dark"></span>
+                <span className="w-0 h-0 border-l-12 border-r-12 border-t-15 border-l-transparent border-r-transparent  absolute bottom-[-14px] left-[27px] "></span>
               </div>
 
               <div className="flex items-center gap-5 2xl:gap-20">
@@ -105,10 +105,10 @@ const WhatTheySay = () => {
                   />
                 </div>
                 <div>
-                  <h4 className="text-xl lg:text-lg 2xl:text-xl font-semibold text-blackColor dark:text-blackColor-dark">
+                  <h4 className="text-xl lg:text-lg 2xl:text-xl font-semibold  ">
                     Robind Jon
                   </h4>
-                  <p className="text-base lg:text-size-15 2xl:text-base text-lightGrey9 dark:text-lightGrey9-dark">
+                  <p className="text-base lg:text-size-15 2xl:text-base ">
                     Desginer TechBoot
                   </p>
                 </div>
