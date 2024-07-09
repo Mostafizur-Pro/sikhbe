@@ -16,7 +16,8 @@ const navigation = {
     { name: "Course", href: "/course" },
     { name: "About Us", href: "/about" },
     { name: "Course Guideline", href: "/courseGuide" },
-    { name: "Login", href: "/login" },
+    { name: "profile", href: "/dashboard" },
+    // { name: "Login", href: "/login" },
   ],
 };
 

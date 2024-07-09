@@ -6,9 +6,10 @@ type MainLayoutProps = {
     children: ReactNode;
 };
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+const DashboardLayout: React.FC<MainLayoutProps> = ({ children }) => {
     return (
-        <div className="">
+        <div>
+            <Navbar />
             <Navbar />
             <div>{children}</div>
             <Footer />
@@ -16,4 +17,4 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     );
 };
 
-export default MainLayout;
+export default DashboardLayout;
