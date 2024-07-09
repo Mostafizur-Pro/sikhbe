@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo/logo2.png";
 import { Fragment, useState } from "react";
 import { LuSearch } from "react-icons/lu";
 import { LuLogOut } from "react-icons/lu";
@@ -129,10 +129,10 @@ export default function Navbar() {
               </button>
 
               {/* Logo */}
-              <div className="ml-4 flex lg:ml-0">
+              <div className="ml-4 flex items-center lg:ml-0">
                 <a href="#">
-                  <span className="sr-only">Your Company</span>
-                  <Image className="h-8 w-auto" src={logo} alt="Logo" />
+                <span className="sr-only">Sikhbe </span>
+                  <Image className="h-16 w-auto" src={logo} alt="Logo" />
                 </a>
               </div>
 

@@ -29,17 +29,18 @@ const HeroFAQ = () => {
               কোর্স করার জন্য কি পূর্বে কোনো অভিজ্ঞতা দরকার?
             </div>
             <div className="collapse-content text-2xl text-white">
-              <p>
-                {/* <hr className="my-5" /> */}
-                না, কোনো পূর্ব অভিজ্ঞতা প্রয়োজন নেই। আমরা শূন্য থেকে শেখাচ্ছি।
-                তবে, কিছু বেসিক জ্ঞান থাকা ভালো, যেমন:
+              <div>
+                <p>
+                  না, কোনো পূর্ব অভিজ্ঞতা প্রয়োজন নেই। আমরা শূন্য থেকে শেখাচ্ছি।
+                  তবে, কিছু বেসিক জ্ঞান থাকা ভালো, যেমন:
+                </p>
                 <ul className="my-2">
                   <li>• কম্পিউটার চালানোর অভিজ্ঞতা (৬ মাস থেকে ১ বছর)</li>
                   <li>• ইন্টারনেট থেকে তথ্য খুঁজে বের করার ক্ষমতা</li>
                   <li>• বেসিক ইংরেজি পড়তে এবং বুঝতে পারার ক্ষমতা</li>
                   <li>• টাইপিং করার সামর্থ্য (১৫-৩০ wpm স্পিড হলে ভালো)</li>
                 </ul>
-              </p>
+              </div>
             </div>
           </div>
           {/* FAQ Item 3 */}
@@ -50,7 +51,6 @@ const HeroFAQ = () => {
             </div>
             <div className="collapse-content text-2xl text-white">
               <p>
-                {/* <hr className="my-5" /> */}
                 এই কোর্সে ওয়েব ডেভেলপার হওয়ার জন্য যা যা লাগে, তার সবই
                 অন্তর্ভুক্ত আছে। HTML, CSS থেকে শুরু করে Bootstrap, JavaScript,
                 Git, ES6, REST API, Server, JSON, React, Advanced React, Node,
@@ -68,7 +68,6 @@ const HeroFAQ = () => {
             </div>
             <div className="collapse-content text-2xl text-white">
               <p>
-                {/* <hr className="my-5" /> */}
                 এই কোর্সে সরাসরি WordPress বা Freelancing নিয়ে কিছু নেই। এই
                 কোর্সের মূল উদ্দেশ্য হচ্ছে সফটওয়্যার কোম্পানিতে ওয়েব ডেভেলপার
                 হিসেবে কাজ করার জন্য প্রস্তুত করা। তবে, এডভান্সড লেভেলে

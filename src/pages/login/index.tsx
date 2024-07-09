@@ -2,6 +2,7 @@
 
 import axios from "axios";
 import { signIn } from "next-auth/react";
+
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -20,25 +21,36 @@ const Login = () => {
 
     const email = formData.email;
     const password = formData.password;
-
     try {
-      // const res = await signIn("credentials", {
-      //   email,
-      //   password,
-      //   redirect: false,
-      // });
+      const result = await signIn("credentials", {
+        email: formData.email,
+        password: formData.password,
+        redirect: false,
+      });
 
-      const response = await axios.post("/api/students/login", formData);
-      // console.log("data", response);
-      // console.log("Login success", response.data);
-      toast.success("Login success");
-      router.push("/dashboard");
-
-      setLoginLoading(false);
-      router.replace("/");
+      if (result?.error) {
+        toast.error(result.error);
+      } else {
+        toast.success("Login successful");
+        router.push("/dashboard");
+      }
     } catch (error) {
-      console.error(error);
+      console.error("Login error", error);
+      toast.error("Login failed");
+    } finally {
+      setLoginLoading(false);
     }
+
+    // try {
+    //   const response = await axios.post("/api/students/login", formData);
+    //   toast.success("Login success");
+    //   router.push("/dashboard");
+
+    //   setLoginLoading(false);
+    //   router.replace("/");
+    // } catch (error) {
+    //   console.error(error);
+    // }
   };
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-main">

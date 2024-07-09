@@ -3,7 +3,7 @@ import Cover from "@/components/Cover/Cover";
 
 const About = () => {
   return (
-    <div className="container mx-auto bg-main text-white">
+    <div className="mx-auto bg-main text-white">
       <Cover title={"About Us"} title2={"About-us"} />
       <AboutTeam />
       {/* <AboutPage/> */}

@@ -35,7 +35,6 @@ export default async function handler(
         config.jwt_secret as string,
         { expiresIn: "1d" }
       );
-      
 
       res.status(200).json({ token, student });
     } catch (error) {
@@ -44,7 +43,3 @@ export default async function handler(
     }
   }
 }
-
-
-
-
