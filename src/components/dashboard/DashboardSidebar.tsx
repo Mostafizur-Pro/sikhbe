@@ -6,7 +6,8 @@ const DashboardSidebar = () => {
   const pathname = usePathname();
 
   const NavLInks = [
-    { id: 1, name: "Profile", path: "/dashboard" },
+    { id: 1, name: "Dashboard", path: "/dashboard" },
+    { id: 1, name: "Profile", path: "/dashboard/profile" },
     { id: 2, name: "Education", path: "/dashboard/education" },
     { id: 3, name: "Job Experience", path: "/dashboard/job-experience" },
     { id: 4, name: "Order History", path: "/dashboard/order-history" },

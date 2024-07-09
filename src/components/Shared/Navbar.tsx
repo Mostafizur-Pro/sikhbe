@@ -15,7 +15,7 @@ const navigation = {
     { name: "Hero", href: "/" },
     { name: "Course", href: "/course" },
     { name: "About Us", href: "/about" },
-    { name: "Course Guideline", href: "/courseGuide" },
+    { name: "Guideline", href: "/courseGuide" },
     { name: "profile", href: "/dashboard" },
     // { name: "Login", href: "/login" },
   ],
