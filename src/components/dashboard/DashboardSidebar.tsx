@@ -23,7 +23,7 @@ const DashboardSidebar = () => {
               className={`px-[15px] py-[15px]  ${
                 link.path === pathname
                   ? "active-Navlink rounded-md"
-                  : "normal-Navlink rounded-md"
+                  : "normal-Navlink rounded-md hover:bg-gray-700"
               }`}
             >
               <Link className="text-white text-xl" href={link.path}>

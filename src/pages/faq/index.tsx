@@ -5,7 +5,7 @@ import React from "react";
 
 const index = () => {
   return (
-    <div className="container mx-auto bg-main text-white">
+    <div className=" bg-main text-white">
       <Cover title={"Frequently Asked Questions"} title2={"FAQ"} />
       <Faq />
       {/* <CourseDetails />
